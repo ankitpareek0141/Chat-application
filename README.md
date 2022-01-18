@@ -14,8 +14,7 @@ npm start
 ```
 
 ### 3. Click on the text below to open application on your browser
-
-[Open app](http://localhost:3000)
+> [Open app](http://localhost:3000)
 
 
 Done, You are all set to use my application for chatting with your friends.
