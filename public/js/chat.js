@@ -11,6 +11,13 @@ socket.on('user join', (message) => {
 // Sends the message from the input field
 document.getElementById('sendMessageBtn').addEventListener('click', () => {
     
+
+    // mustache demo
+    let card = document.getElementById("chatCard").innerHTML;
+    var rendered = Mustache.render(card, { name: 'DIVISHA', message: "THIS IS IT" });
+    document.getElementById("temp").innerHTML = rendered;
+
+    // message code
     var userMessage = document.getElementById('messageBox').value;
     socket.emit('send message', userMessage);
     

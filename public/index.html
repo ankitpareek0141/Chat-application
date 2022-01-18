@@ -29,7 +29,7 @@
     </div>
 
     <!-- Messages Contaier with scrollbar-->
-    <div class="container mt-2 p-2 w-50 border border-dark anyClass">
+    <div class="container mt-2 p-2 w-50 border border-dark anyClass" id="chatBox">
         
         <div class="media mb-3 border border-dark rounded msgBox">
             <div class="media-body">
@@ -52,42 +52,20 @@
             </div>
         </div>
 
-        <div class="media mb-3">
-            <div class="media-body border border-dark rounded msgBox">
-                <h5 class="mt-0 mb-1 text-muted">Chiku</h5>
-                acha to theek hai
-            </div>
-        </div>
-
-        <div class="media mb-3">
-            <div class="media-body border border-dark rounded msgBox">
-                <h5 class="mt-0 mb-1 text-muted">Alex</h5>
-                chal fir kal milte hai ok
-            </div>
-        </div>
-
-        <div class="media mb-3">
-            <div class="media-body border border-dark rounded msgBox">
-                <h5 class="mt-0 mb-1 text-muted">Sita</h5>
-                chal fir kal milte hai ok
-            </div>
-        </div>
-
-        <div class="media mb-3">
-            <div class="media-body border border-dark rounded msgBox">
-                <h5 class="mt-0 mb-1 text-muted">Shyam</h5>
-                chal fir kal milte hai ok
-            </div>
-        </div>
-
-        <div class="media mb-3">
-            <div class="media-body border border-dark rounded msgBox">
-                <h5 class="mt-0 mb-1 text-muted">Ram</h5>
-                chal fir kal milte hai ok
-            </div>
-        </div>
-
     </div>
+
+    <div id="temp">
+        
+    </div>
+
+    <script id="chatCard" type="x-tmpl-mustache">
+        <div class="media mb-3">
+            <div class="media-body border border-dark rounded msgBox">
+                <h5 class="mt-0 mb-1 text-muted">{{name}}</h5>
+                {{message}}
+            </div>
+        </div>
+    </script>
 
     <!-- Message and location button area-->
     <div class="container mt-2 p-1 w-50">
