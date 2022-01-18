@@ -10,12 +10,12 @@ npm install
 
 ### 2. Enter command in the console
 ```
-> npm start
+npm start
 ```
 
 ### 3. Enter this url on your browser to see the client side interface
 ```
-> http://localhost:3000
+http://localhost:3000
 ```
 
 Done, You are all set to use my application for chatting with your friends.
