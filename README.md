@@ -3,17 +3,17 @@ Basic chat application for implementing the socket programming in nodejs. In thi
 
 Follow the steps below to run the project on your machine.
 
-### 1. Install node_modules
+### 1. For installing all the required dependencies
 ```
 npm install
 ```
 
-### 2. Enter command in the console
+### 2. Run this command for starting the local server
 ```
 npm start
 ```
 
-### 3. Click on the text below to open application on your browser
+### 3. Click on the link below to run website on the browser
 > [Open app](http://localhost:3000)
 
 
