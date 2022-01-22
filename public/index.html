@@ -31,37 +31,23 @@
     <!-- Messages Contaier with scrollbar-->
     <div class="container mt-2 p-2 w-50 border border-dark anyClass" id="chatBox">
         
-        <div class="media mb-3 border border-dark rounded msgBox">
-            <div class="media-body">
-                <h5 class="mt-0 mb-1 text-muted">Himanshu</h5>
-                Aur bhai ghar par hai kya...
-            </div>
-        </div>
-
-        <div class="media mb-3">
-            <div class="media-body border border-dark rounded msgBox">
-                <h5 class="mt-0 mb-1 text-muted">Sinti</h5>
-                Aur bhai ghar par hai kya...
-            </div>
-        </div>
-
-        <div class="media mb-3">
-            <div class="media-body border border-dark rounded msgBox">
-                <h5 class="mt-0 mb-1 text-muted">Ankit</h5>
-                bus sab bdia
-            </div>
-        </div>
+        <!-- All messages will be render here -->
 
     </div>
 
-    <div id="temp">
-        
-    </div>
+    <script id="senderCard" type="x-tmpl-mustache">
+        <div class="media mb-3 bg-primary border border-dark rounded" style="width: max-content;">
+            <div class="media-body msgBox text-white">
+                <h5 class="mt-0 mb-1"><u>{{name}}</u></h5>
+                {{message}}
+            </div>
+        </div>
+    </script>
 
-    <script id="chatCard" type="x-tmpl-mustache">
-        <div class="media mb-3">
-            <div class="media-body border border-dark rounded msgBox">
-                <h5 class="mt-0 mb-1 text-muted">{{name}}</h5>
+    <script id="receiverCard" type="x-tmpl-mustache">
+        <div class="media mb-3 bg-secondary border border-dark rounded" style="width: max-content;">
+            <div class="media-body msgBox text-white">
+                <h5 class="mt-0 mb-1"><u>{{name}}</u></h5>
                 {{message}}
             </div>
         </div>

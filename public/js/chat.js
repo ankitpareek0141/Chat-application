@@ -11,14 +11,14 @@ socket.on('user join', (message) => {
 // Sends the message from the input field
 document.getElementById('sendMessageBtn').addEventListener('click', () => {
     
+    let parentContainer = document.getElementById("chatBox");
+    let card = document.getElementById("senderCard").innerHTML;
 
-    // mustache demo
-    let card = document.getElementById("chatCard").innerHTML;
-    var rendered = Mustache.render(card, { name: 'DIVISHA', message: "THIS IS IT" });
-    document.getElementById("temp").innerHTML = rendered;
-
-    // message code
+    // Getting typed message
     var userMessage = document.getElementById('messageBox').value;
+    var rendered = Mustache.render(card, { name: 'Abc', message: userMessage });
+    parentContainer.insertAdjacentHTML("beforeend", rendered);
+
     socket.emit('send message', userMessage);
     
     document.getElementById('messageBox').value = null;
@@ -30,7 +30,7 @@ document.getElementById('sendLocationBtn').addEventListener('click', () => {
     if(!navigator) {
         return console.log('Navigator not found on your browser!');
     }
-
+    
     navigator.geolocation.getCurrentPosition((oLocation) => {
         socket.emit('send location', {
             longitude: oLocation.coords.longitude,
@@ -44,6 +44,11 @@ document.getElementById('sendLocationBtn').addEventListener('click', () => {
 // Prints the other user messages
 socket.on('check message', (message) => {
     console.log("==>> ", message);
+
+    let parentContainer = document.getElementById("chatBox");
+    let card = document.getElementById("receiverCard").innerHTML;
+    var rendered = Mustache.render(card, { name: 'Xyz', message: message });
+    parentContainer.insertAdjacentHTML("beforeend", rendered);
 });
 
 // Prints the other users shared locations

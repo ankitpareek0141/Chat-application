@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 const socketio = require('socket.io');
-const PORT = 3000;
+const PORT = 8000;
 
 const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
@@ -17,7 +17,7 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('user join', "New user joined the chat!");
 
     socket.on('send message', (message) => {
-        io.emit("check message", message);
+        socket.broadcast.emit("check message", message);
     });
 
     socket.on('send location', (location, callback) => {
